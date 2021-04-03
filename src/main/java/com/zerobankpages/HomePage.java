@@ -19,7 +19,7 @@ public class HomePage extends BasePage {
 	By onlinebanking = By.id("onlineBankingMenu");
 	By feedback = By.id("feedback");
 
-	// Always Create constructor of page class b'coz it will always be called in other class while object creation.
+	// Always Create constructor of page class b'coz it will always be called in other class when you are creating object.
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
