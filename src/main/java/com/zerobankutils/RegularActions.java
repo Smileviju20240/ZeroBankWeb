@@ -39,6 +39,10 @@ public class RegularActions extends BasePage{
 		return driver.getTitle();
 	}
 	
+	public String gettingText(By locator) {
+	     return doFind(locator).getText();
+	}
+	
 	public boolean isDisalbedOrNot(By locator) {
 		return doFind(locator).isDisplayed();
 	}

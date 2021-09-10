@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.config.DriverManagerType;
 
 public class BasePage {
 	
-	private WebDriver driver=null;              //driver instance is a private b'coz i don't want it should used by everyone   
+	private WebDriver driver=null;              //driver instance is a private b'coz i don't want it should used by anyone outside of the class   
 	private Properties prop = null;
 	
 	
@@ -42,7 +42,7 @@ public class BasePage {
 			openFireFox();
 			
 		default:
-			System.out.println("Please pass the correct Browsername");
+			System.out.println("Please provide the correct Browsername");
 			break;
 		}
 		
@@ -102,7 +102,7 @@ public class BasePage {
 	 * @return driver instance as a null if driver is not initialized and driver is initialized under method
 	 */
 	@SuppressWarnings("unused")
-	private WebDriver getDriver() {
+	public WebDriver getDriver() {
 		if (driver.equals(null)) {
 			throw new NullPointerException("driver instance is not initialized");
 		}

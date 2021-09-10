@@ -23,7 +23,7 @@ public class HomePageTest extends BasePage{
 	BasePage bp;
 	HomePage hp;
 	
-	@BeforeMethod
+	@BeforeTest
 	  public void setUp() {
 		
 		bp = new BasePage();
@@ -38,14 +38,18 @@ public class HomePageTest extends BasePage{
   public void verifyHomePage() {
 		Assert.assertEquals(AppConstants.HOME_PAGE_TITLE, hp.getTitleOfHomePage());
   }
+	@Test(priority=2)
+	public void verifyfooterText() {
+		Assert.assertEquals(AppConstants.Footer_Text, hp.getfooterText());
+	}
 	
-	@Test(priority = 2)
+	@Test(priority = 3)
   public void doClickOnSignIn() {
 		hp.verifyAnddoclickSignintab();
 	}
   
 
-  @AfterMethod
+  @AfterTest
   public void tearDownTheBrowser() {
 	  driver.quit();
   }
