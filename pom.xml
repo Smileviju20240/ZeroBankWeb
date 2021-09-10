@@ -76,7 +76,7 @@
 				
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>${suiteFile}</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 				
