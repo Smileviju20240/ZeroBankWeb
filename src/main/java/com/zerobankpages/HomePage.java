@@ -2,6 +2,7 @@ package com.zerobankpages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.zerobankbase.BasePage;
 import com.zerobankutils.RegularActions;
@@ -18,6 +19,7 @@ public class HomePage extends BasePage {
 	By Hometab = By.id("homeMenu");
 	By onlinebanking = By.id("onlineBankingMenu");
 	By feedback = By.id("feedback");
+	By footertext = By.cssSelector("div.disclaimer.span12");
 
 	// Always Create constructor of page class b'coz it will always be called in other class when you are creating object.
 
@@ -28,6 +30,10 @@ public class HomePage extends BasePage {
 
 	public String getTitleOfHomePage() {
 		return action.gettingTitle();
+	}
+	
+	public String getfooterText() {
+		return action.gettingText(footertext);
 	}
 
 	public LoginPage verifyAnddoclickSignintab() {

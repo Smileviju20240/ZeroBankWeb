@@ -53,6 +53,7 @@ public class LoginPage extends BasePage {
 			e.printStackTrace();
 		}
 		action.doClick(proceedlink);
+		
 	}
 	
 	public boolean docheck_loginerrormessage() {
